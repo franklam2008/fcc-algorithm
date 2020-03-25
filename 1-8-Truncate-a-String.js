@@ -14,7 +14,11 @@ function truncateString(str, num) {
   newstr += "...";
   return newstr;
 }
-
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  if (str.length <= num) return str
+  return str.substr(0, 8).concat('...');
+}
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
 /*truncateString("A-tisket a-tasket A green and yellow basket", 8) should return "A-tisket...".
 truncateString("Peter Piper picked a peck of pickled peppers", 11) should return "Peter Piper...".

@@ -14,7 +14,9 @@ function titleCase(str) {
   console.log(newstr)
   return newstr;
 }
-
+function titleCase(str) {
+  return str.toLocaleLowerCase().split(" ").map(item => item.charAt(0).toUpperCase() + item.slice(1)).join(' ')
+}
 titleCase("I'm a little tea pot");
 /*titleCase("I'm a little tea pot") should return a string.
 titleCase("I'm a little tea pot") should return I'm A Little Tea Pot.
