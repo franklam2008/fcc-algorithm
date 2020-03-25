@@ -2,8 +2,8 @@ function repeatStringNumTimes(str, num) {
   if(num<0){
     return "";
   }
-  var newstr=''
-  for( var i=0;i<num;i++){
+  let newstr=''
+  for( let i=0;i<num;i++){
     newstr+=str
   }
   return newstr;

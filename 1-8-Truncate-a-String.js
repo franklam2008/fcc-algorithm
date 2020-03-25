@@ -1,17 +1,17 @@
 function truncateString(str, num) {
   // Clear out that junk in your trunk
-  if(num>=str.length){
+  if (num >= str.length) {
     return str;
   }
-  var arr=''
-  arr=str.split('')
-  var newstr=''
-  for(var i=0;i<num;i++){
-    newstr+=arr[i]
+  var arr = "";
+  arr = str.split("");
+  var newstr = "";
+  for (var i = 0; i < num; i++) {
+    newstr += arr[i];
   }
 
-console.log(arr)
-  newstr+='...';
+  console.log(arr);
+  newstr += "...";
   return newstr;
 }
 
