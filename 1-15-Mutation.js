@@ -18,6 +18,16 @@ function mutation(arr) {
     return ans;
 }
 
+function mutation(arr) {
+    let ans = true;
+    arr[1].toLowerCase().split('').forEach(letter => {
+      if (!arr[0].toLowerCase().includes(letter)) {
+        ans = false
+      }
+    })
+    return ans;
+  }
+  
 mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
 
 /*mutation(["hello", "hey"]) should return false.

@@ -12,7 +12,20 @@ console.log(arr)
   }
   return arr.length;
 }
-
+function getIndexToIns(arr, num) {
+  let ans=0;
+  arr = arr.sort(function (a, b) { return a - b });//sort arr
+  if (arr.length < 1 || num === arr[0]) {//empty arr or at the beginning 
+    return ans
+  }
+  arr.forEach(arrNum => {
+    if (num > arrNum) {
+      ans++
+    }
+  })
+  return ans 
+}
+getIndexToIns([2, 5, 10], 15)
 getIndexToIns([5, 3, 20, 3], 5);
 /*getIndexToIns([10, 20, 30, 40, 50], 35) should return 3.
 getIndexToIns([10, 20, 30, 40, 50], 35) should return a number.
