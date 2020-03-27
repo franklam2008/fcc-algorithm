@@ -7,4 +7,4 @@ function factorialize(num) {
   return ans;
 }
 
-console.log(factorialize(5));
+console.log(factorialize(5))
