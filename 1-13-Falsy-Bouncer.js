@@ -6,10 +6,8 @@ function bouncer(arr) {
             arr.splice(i, 1)
         }
     }
-
     return arr;
 }
-
 function bouncer(arr) {
     // Don't show a false ID to this bouncer.
    
