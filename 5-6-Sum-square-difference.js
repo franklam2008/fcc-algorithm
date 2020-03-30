@@ -1,6 +1,5 @@
 function sumSquareDifference(number) {
   // Good luck!
-  var ans=0
   var firstsum=0
   var secondsum=0
   for(var i=1;i<=number;i++){
