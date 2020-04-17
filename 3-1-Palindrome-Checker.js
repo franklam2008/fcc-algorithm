@@ -1,49 +1,51 @@
 // https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/palindrome-checker
 function palindrome(str) {
   // Good luck!
-var arr=[];
-var newarr=[];
-var ans=true;
-str=str.replace(/[^A-Za-z0-9]/g, '')
-str=str.toLowerCase();
-  for(var i=0;i<str.length;i++){
-  arr[i]= str[i];
-  if(arr[i]!==' '){
-  newarr.push(arr[i]);
-  };
-};
-
-var a=newarr.length/2;
-var b =0;
-for(var j=0;j<a;j++){
-  if(newarr[j]===newarr[newarr.length-1-j]){
-    ans=true;
-  }else{
-    ans=false;
-    break;
-  };
-  b+=1
-};
-  console.log(ans);
-  
-  return ans;
-};
-function palindrome(str) {
-  const arr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase().split('')
-  let reverse = [...arr].reverse()
-
-  for (let i = 0; i < reverse.length; i++) {
-    if (reverse[i] !== arr[i]) {
-      return false
+  var arr = [];
+  var newarr = [];
+  var ans = true;
+  str = str.replace(/[^A-Za-z0-9]/g, "");
+  str = str.toLowerCase();
+  for (var i = 0; i < str.length; i++) {
+    arr[i] = str[i];
+    if (arr[i] !== " ") {
+      newarr.push(arr[i]);
     }
   }
 
-  return true
+  var a = newarr.length / 2;
+  var b = 0;
+  for (var j = 0; j < a; j++) {
+    if (newarr[j] === newarr[newarr.length - 1 - j]) {
+      ans = true;
+    } else {
+      ans = false;
+      break;
+    }
+    b += 1;
+  }
+  console.log(ans);
+
+  return ans;
+}
+function palindrome(str) {
+  const arr = str
+    .replace(/[^A-Za-z0-9]/g, "")
+    .toLowerCase()
+    .split("");
+  let reverse = [...arr].reverse();
+
+  for (let i = 0; i < reverse.length; i++) {
+    if (reverse[i] !== arr[i]) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 palindrome("A man, a plan, a canal. Panama");
 palindrome("eye");
-
 
 /*palindrome("eye") should return a boolean.
 palindrome("eye") should return true.
